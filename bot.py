@@ -44,7 +44,7 @@ async def chat_handler(message: types.Message):
 async def main():
     await start_web_server()
     print("Bot va veb server ishga tushdi...")
-    await dp.start_polling(bot)
+    await dp.start_polling(bot, skip_updates=True)
 
 if __name__ == "__main__":
     asyncio.run(main())
